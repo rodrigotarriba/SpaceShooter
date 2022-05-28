@@ -52,6 +52,7 @@ public class PlayerMoving : MonoBehaviour {
                 transform.position = Vector3.MoveTowards(transform.position, mousePosition, 30 * Time.deltaTime);
             }
 
+            Debug.Log("this is the master");
             if (Input.GetKey(KeyCode.W)) transform.Translate(Vector3.up * m_spaceshipSpeed);
             if (Input.GetKey(KeyCode.A)) transform.Translate(Vector3.left * m_spaceshipSpeed);
             if (Input.GetKey(KeyCode.S)) transform.Translate(Vector3.down * m_spaceshipSpeed);
