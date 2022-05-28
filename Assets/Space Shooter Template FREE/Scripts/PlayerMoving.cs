@@ -22,7 +22,8 @@ public class PlayerMoving : MonoBehaviour {
     [Tooltip("offset from viewport borders for player's movement")]
     public Borders borders;
     Camera mainCamera;
-    bool controlIsActive = true; 
+    bool controlIsActive = true;
+    public float m_youCanDeleteThisOne;
 
     public static PlayerMoving instance; //unique instance of the script for easy access to the script
 
@@ -58,6 +59,7 @@ public class PlayerMoving : MonoBehaviour {
             if (Input.GetKey(KeyCode.S)) transform.Translate(Vector3.down * m_spaceshipSpeed);
             if (Input.GetKey(KeyCode.D)) transform.Translate(Vector3.right * m_spaceshipSpeed);
 
+            Debug.Log("this is m see if changes");
 #endif
 
 #if UNITY_IOS || UNITY_ANDROID //if current platform is mobile, 
