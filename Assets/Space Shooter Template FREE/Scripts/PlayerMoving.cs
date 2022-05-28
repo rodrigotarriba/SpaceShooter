@@ -19,7 +19,8 @@ public class PlayerMoving : MonoBehaviour {
     [Tooltip("offset from viewport borders for player's movement")]
     public Borders borders;
     Camera mainCamera;
-    bool controlIsActive = true; 
+    bool controlIsActive = true;
+    public float m_youCanDeleteThisOne;
 
     public static PlayerMoving instance; //unique instance of the script for easy access to the script
 
