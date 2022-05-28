@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 
 [System.Serializable]
+
+
 public class Borders
 {
     [Tooltip("offset from viewport borders for player's movement")]
@@ -15,6 +17,7 @@ public class Borders
 }
 
 public class PlayerMoving : MonoBehaviour {
+    public float m_spaceshipSpeed;
 
     [Tooltip("offset from viewport borders for player's movement")]
     public Borders borders;
@@ -32,6 +35,7 @@ public class PlayerMoving : MonoBehaviour {
 
     private void Start()
     {
+        
         mainCamera = Camera.main;
         ResizeBorders();                //setting 'Player's' moving borders deending on Viewport's size
     }
@@ -48,6 +52,13 @@ public class PlayerMoving : MonoBehaviour {
                 mousePosition.z = transform.position.z;
                 transform.position = Vector3.MoveTowards(transform.position, mousePosition, 30 * Time.deltaTime);
             }
+
+            Debug.Log($"updating");
+            if (Input.GetKey(KeyCode.W)) transform.Translate(Vector3.up * m_spaceshipSpeed);
+            if (Input.GetKey(KeyCode.A)) transform.Translate(Vector3.left * m_spaceshipSpeed);
+            if (Input.GetKey(KeyCode.S)) transform.Translate(Vector3.down * m_spaceshipSpeed);
+            if (Input.GetKey(KeyCode.D)) transform.Translate(Vector3.right * m_spaceshipSpeed);
+
             Debug.Log("this is m see if changes");
 #endif
 
