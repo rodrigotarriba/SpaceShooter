@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SPACESHIP!
+  m_text: "LAS\nNAVES\nESPACIALES\nSON LAS\nMAS \nCHINGONAS"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5cccf0af6dfee15439a6a44f90ced35e, type: 2}
   m_sharedMaterial: {fileID: -6824422337137515214, guid: 5cccf0af6dfee15439a6a44f90ced35e,
